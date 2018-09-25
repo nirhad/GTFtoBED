@@ -1,0 +1,1 @@
+tail -n +6 Input.gtf | sed "s/\"//g" | tr -s ';' '\t' | tr -s ' ' '\t' |awk 'BEGIN{FS="\t"; OFS="\t"} {print $1, $4, $5, $7, $3, $10, $12, $14, $16, $18, $27}' > Out.bed
